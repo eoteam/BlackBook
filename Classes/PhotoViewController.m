@@ -38,6 +38,9 @@
 	NSLog(@"%d",toolbarItems.count);
 	[_toolbar setItems:toolbarItems];
 
+	self.navigationItem.backBarButtonItem =
+	[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered
+									 target:nil action:nil] autorelease];	
 	
 }
 - (void)updateChrome {
@@ -79,14 +82,15 @@
 			TextViewController *controller = [[TextViewController alloc] initWithContent:bio];
 			
 			
-			UINavigationController *newNavController = [[UINavigationController alloc]
-														initWithRootViewController:controller];
-			
-			newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-			[[self navigationController] presentModalViewController:newNavController
-														   animated:YES];
-			
+			//UINavigationController *newNavController = [[UINavigationController alloc]
+			//													initWithRootViewController:controller];
+			//		
+			//		newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+			//		[[self navigationController] presentModalViewController:newNavController
+			//													   animated:YES];
+			[self.navigationController pushViewController:controller animated:YES];
 			[controller release];
+			//isModal = TRUE;
 		}
 		else if(buttonIndex == 1) {
 			NSLog(@"OK THEN");
@@ -98,16 +102,27 @@
 			TextViewController *controller = [[TextViewController alloc] initWithContent:credits];
 			
 			
-			UINavigationController *newNavController = [[UINavigationController alloc]
-														initWithRootViewController:controller];
-			newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-			[[self navigationController] presentModalViewController:newNavController
-														   animated:YES];
+			
+			//UINavigationController *newNavController = [[UINavigationController alloc]
+			//											initWithRootViewController:controller];
+			//newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+			
+			//newNavController.modalTransitionStyle =   UIModalTransitionStyleCoverVertical;
+			//[self presentModalViewController:newNavController animated:YES];
+			//[[self navigationController] presentModalViewController:newNavController animated:YES];
+			[self.navigationController pushViewController:controller animated:YES];
+			
 			[controller release];
+			//isModal = YES;	
 		}
-		//	else if(buttonIndex == 3 {
-		//		
-		//	}
+		else if(buttonIndex == 2) {
+			NSLog(@"OK THEN2");
+			//			InfoViewController *controller = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
+			//			controller.delegate = self;
+			//			controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+			//			[self presentModalViewController:controller animated:YES];
+			//			[controller release];			
+		}	
 	}
 	else {
 		if (buttonIndex == 0) {

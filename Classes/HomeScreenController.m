@@ -42,6 +42,10 @@
 	[self.view addSubview:myImage];
 	[myImage release];	
 	
+	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    currentOrientation =  [[UIDevice currentDevice] orientation];
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+	NSLog(@"orientation %i",currentOrientation);
 	
 	frontLabel = [[UITextView alloc] initWithFrame:textFramePortrait];
 	NSString *bio = @"Eddie Opara, has joined Pentagram as a partner. He becomes the seventh principal in Pentagram's New York office, where his team will be based. He joins Pentagram from his own studio, The Map Office, which he established in 2005.";
@@ -52,6 +56,7 @@
 	frontLabel.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.5f];
 	myImage.autoresizesSubviews = YES;
 	[self.view addSubview:frontLabel];
+	[frontLabel setFrame:textFramePortrait];
 	[frontLabel release];	
 	
 	
@@ -77,8 +82,8 @@
 	//myImage.contentMode = UIViewContentModeScaleAspectFit;
 	
 	
-	NSLog(@"orientation %i height %d",currentOrientation,self.view.size.height);
-	if(currentOrientation == 1 || currentOrientation == 2) 
+	NSLog(@"orientationDID %i",currentOrientation);
+	if(currentOrientation == 0 || currentOrientation == 1 || currentOrientation == 2) 
 		[frontLabel setFrame:textFramePortrait];
 	else
 		[frontLabel setFrame:textFrameLandscape];

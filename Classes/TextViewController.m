@@ -47,14 +47,15 @@
 		self.view = textView;	
 		[textView release];	
 		
-		UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] 
-										 initWithTitle:@"Close"
-										 style: UIBarButtonItemStyleBordered
-										 target:self 
-										 action:@selector(cancel)];
-		[cancelButton setTitle:@"Close"];
-		[[self navigationItem] setLeftBarButtonItem:cancelButton];
-		[cancelButton release];
+	
+		//UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] 
+//										 initWithTitle:@"Close"
+//										 style: UIBarButtonItemStyleBordered
+//										 target:self 
+//										 action:@selector(cancel)];
+//		[cancelButton setTitle:@"Close"];
+//		[[self navigationItem] setLeftBarButtonItem:cancelButton];
+//		[cancelButton release];
 				
 	}
 	return self;	

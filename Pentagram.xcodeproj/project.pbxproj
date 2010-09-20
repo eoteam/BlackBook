@@ -172,6 +172,20 @@
 		80DC5822124538A60099684E /* BaseGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DC5821124538A60099684E /* BaseGridViewController.m */; };
 		80DC5896124554130099684E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DC5895124554130099684E /* MessageUI.framework */; };
 		80DC59CF1245A1E30099684E /* credits.json in Resources */ = {isa = PBXBuildFile; fileRef = 80DC59CE1245A1E30099684E /* credits.json */; };
+		80DE5D5F1247CE6F003D34E2 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5D5E1247CE6F003D34E2 /* 19-gear@2x.png */; };
+		80DE5DB71247D3F4003D34E2 /* ScrollingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE5DB61247D3F4003D34E2 /* ScrollingViewController.m */; };
+		80DE5DCE1247D4E4003D34E2 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5DC91247D4E4003D34E2 /* image1.jpg */; };
+		80DE5DCF1247D4E4003D34E2 /* image2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5DCA1247D4E4003D34E2 /* image2.jpg */; };
+		80DE5DD01247D4E4003D34E2 /* image3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5DCB1247D4E4003D34E2 /* image3.jpg */; };
+		80DE5DD11247D4E4003D34E2 /* image4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5DCC1247D4E4003D34E2 /* image4.jpg */; };
+		80DE5DD21247D4E4003D34E2 /* image5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5DCD1247D4E4003D34E2 /* image5.jpg */; };
+		80DE5E9D1247F1DA003D34E2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE5E9A1247F1DA003D34E2 /* MapViewController.m */; };
+		80DE5EC11247F265003D34E2 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5EBE1247F265003D34E2 /* MapViewController.xib */; };
+		80DE5EC21247F265003D34E2 /* PlacemarkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5EBF1247F265003D34E2 /* PlacemarkViewController.xib */; };
+		80DE5EC31247F265003D34E2 /* ScrollingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80DE5EC01247F265003D34E2 /* ScrollingViewController.xib */; };
+		80DE5ED41247F387003D34E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DE5ED31247F387003D34E2 /* MapKit.framework */; };
+		80DE5FBE1247FDE9003D34E2 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80DE5FBC1247FDE9003D34E2 /* MyAnnotation.m */; };
+		80DE5FEC1247FE3F003D34E2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DE5FEB1247FE3F003D34E2 /* CoreLocation.framework */; };
 		BE1D843A0F8D104B00EC8BB8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1D84390F8D104B00EC8BB8 /* QuartzCore.framework */; };
 		BE5F25920EBA5F0400FD59A6 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5F25910EBA5F0400FD59A6 /* GridViewController.m */; };
 		BE80E24A0EAEFF6100743358 /* MockPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BE80E2490EAEFF6100743358 /* MockPhotoSource.m */; };
@@ -511,6 +525,23 @@
 		80DC5823124538E40099684E /* BaseGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGridViewController.h; sourceTree = "<group>"; };
 		80DC5895124554130099684E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		80DC59CE1245A1E30099684E /* credits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = credits.json; sourceTree = "<group>"; };
+		80DE5D5E1247CE6F003D34E2 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear@2x.png"; sourceTree = "<group>"; };
+		80DE5DB51247D3F4003D34E2 /* ScrollingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollingViewController.h; sourceTree = "<group>"; };
+		80DE5DB61247D3F4003D34E2 /* ScrollingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollingViewController.m; sourceTree = "<group>"; };
+		80DE5DC91247D4E4003D34E2 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
+		80DE5DCA1247D4E4003D34E2 /* image2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image2.jpg; sourceTree = "<group>"; };
+		80DE5DCB1247D4E4003D34E2 /* image3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image3.jpg; sourceTree = "<group>"; };
+		80DE5DCC1247D4E4003D34E2 /* image4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image4.jpg; sourceTree = "<group>"; };
+		80DE5DCD1247D4E4003D34E2 /* image5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image5.jpg; sourceTree = "<group>"; };
+		80DE5E991247F1DA003D34E2 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		80DE5E9A1247F1DA003D34E2 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		80DE5EBE1247F265003D34E2 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MapViewController.xib; path = Resources/nibs/MapViewController.xib; sourceTree = "<group>"; };
+		80DE5EBF1247F265003D34E2 /* PlacemarkViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PlacemarkViewController.xib; path = Resources/nibs/PlacemarkViewController.xib; sourceTree = "<group>"; };
+		80DE5EC01247F265003D34E2 /* ScrollingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ScrollingViewController.xib; path = Resources/nibs/ScrollingViewController.xib; sourceTree = "<group>"; };
+		80DE5ED31247F387003D34E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		80DE5FBC1247FDE9003D34E2 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		80DE5FBD1247FDE9003D34E2 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		80DE5FEB1247FE3F003D34E2 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE1D84390F8D104B00EC8BB8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BE5F25900EBA5F0400FD59A6 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
@@ -537,6 +568,8 @@
 				6E3794F911B9B6DD0011C497 /* libThree20UINavigator.a in Frameworks */,
 				6E3794FA11B9B6DE0011C497 /* libThree20UICommon.a in Frameworks */,
 				80DC5896124554130099684E /* MessageUI.framework in Frameworks */,
+				80DE5ED41247F387003D34E2 /* MapKit.framework in Frameworks */,
+				80DE5FEC1247FE3F003D34E2 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +579,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				80DE5FBC1247FDE9003D34E2 /* MyAnnotation.m */,
+				80DE5FBD1247FDE9003D34E2 /* MyAnnotation.h */,
+				80DE5E991247F1DA003D34E2 /* MapViewController.h */,
+				80DE5E9A1247F1DA003D34E2 /* MapViewController.m */,
+				80DE5DB51247D3F4003D34E2 /* ScrollingViewController.h */,
+				80DE5DB61247D3F4003D34E2 /* ScrollingViewController.m */,
 				1D3623240D0F684500981E51 /* AppDelegate.h */,
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 				28C286DF0D94DF7D0034E888 /* HomeScreenController.h */,
@@ -582,6 +621,7 @@
 				6E7F9782118E37BE00443B46 /* Dependencies */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
+				801AF0371247C52200E2F046 /* Resources-iPad */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
 			name = CustomTemplate;
@@ -599,6 +639,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				80DE5EBE1247F265003D34E2 /* MapViewController.xib */,
+				80DE5EBF1247F265003D34E2 /* PlacemarkViewController.xib */,
+				80DE5EC01247F265003D34E2 /* ScrollingViewController.xib */,
+				80DE5DC91247D4E4003D34E2 /* image1.jpg */,
+				80DE5DCA1247D4E4003D34E2 /* image2.jpg */,
+				80DE5DCB1247D4E4003D34E2 /* image3.jpg */,
+				80DE5DCC1247D4E4003D34E2 /* image4.jpg */,
+				80DE5DCD1247D4E4003D34E2 /* image5.jpg */,
 				80DC59CE1245A1E30099684E /* credits.json */,
 				80DC549E124451170099684E /* images.json */,
 				80D5641F1242C00E00406FAB /* app_icon_iphone4.png */,
@@ -621,6 +669,8 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				80DC5895124554130099684E /* MessageUI.framework */,
+				80DE5ED31247F387003D34E2 /* MapKit.framework */,
+				80DE5FEB1247FE3F003D34E2 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -719,6 +769,13 @@
 				6E7F9963118E3A6000443B46 /* UnitTests.xcconfig */,
 			);
 			name = Configurations;
+			sourceTree = "<group>";
+		};
+		801AF0371247C52200E2F046 /* Resources-iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 		80772D1412442BDE008C7093 /* thumbs */ = {
@@ -879,6 +936,7 @@
 		80D564A71242C00E00406FAB /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				80DE5D5E1247CE6F003D34E2 /* 19-gear@2x.png */,
 				80D564A81242C00E00406FAB /* 19-gear.png */,
 				80D564A91242C00E00406FAB /* icon_arrow_left.png */,
 				80D564AA1242C00E00406FAB /* icon_arrow_right.png */,
@@ -955,6 +1013,9 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = Pentagram;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pentagram" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
@@ -1254,6 +1315,15 @@
 				80DC549F124451170099684E /* images.json in Resources */,
 				80DC57161244A5940099684E /* bio.json in Resources */,
 				80DC59CF1245A1E30099684E /* credits.json in Resources */,
+				80DE5D5F1247CE6F003D34E2 /* 19-gear@2x.png in Resources */,
+				80DE5DCE1247D4E4003D34E2 /* image1.jpg in Resources */,
+				80DE5DCF1247D4E4003D34E2 /* image2.jpg in Resources */,
+				80DE5DD01247D4E4003D34E2 /* image3.jpg in Resources */,
+				80DE5DD11247D4E4003D34E2 /* image4.jpg in Resources */,
+				80DE5DD21247D4E4003D34E2 /* image5.jpg in Resources */,
+				80DE5EC11247F265003D34E2 /* MapViewController.xib in Resources */,
+				80DE5EC21247F265003D34E2 /* PlacemarkViewController.xib in Resources */,
+				80DE5EC31247F265003D34E2 /* ScrollingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1277,6 +1347,9 @@
 				80DC568B12449CA80099684E /* TextViewController.m in Sources */,
 				80DC57A8124526F70099684E /* PhotoViewController.m in Sources */,
 				80DC5822124538A60099684E /* BaseGridViewController.m in Sources */,
+				80DE5DB71247D3F4003D34E2 /* ScrollingViewController.m in Sources */,
+				80DE5E9D1247F1DA003D34E2 /* MapViewController.m in Sources */,
+				80DE5FBE1247FDE9003D34E2 /* MyAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1325,6 +1398,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1334,6 +1408,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1341,10 +1416,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				SDKROOT = iphoneos4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1358,7 +1435,7 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -1370,14 +1447,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Map Office, LLC";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
-				PROVISIONING_PROFILE = "072D964D-3AC8-4CA9-8092-61204B81CB45";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "072D964D-3AC8-4CA9-8092-61204B81CB45";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Distro3;
 		};
@@ -1403,14 +1482,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Map Office, LLC";
 				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PROVISIONING_PROFILE = "072D964D-3AC8-4CA9-8092-61204B81CB45";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "072D964D-3AC8-4CA9-8092-61204B81CB45";
 				SDKROOT = iphoneos4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Distro4;
 		};

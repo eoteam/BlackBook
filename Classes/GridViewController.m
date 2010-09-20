@@ -1,6 +1,7 @@
 #import "GridViewController.h"
 #import "MockPhotoSource.h"
 #import "TextViewController.h"
+#import "ScrollingViewController.h"
 
 @implementation GridViewController
 
@@ -44,7 +45,7 @@
 	
 	[super viewDidAppear:animated];
 	
-	if(isModal == NO) {
+	//if(isModal == NO) {
 		//Initialize the toolbar
 		toolbar = [[UIToolbar alloc] init];
 		toolbar.barStyle =  UIBarStyleBlackTranslucent;
@@ -73,7 +74,7 @@
 	
 		UIBarButtonItem* _nextButton = [[[UIBarButtonItem alloc] initWithImage:
 									 [UIImage imageNamed:@"19-gear.png"]
-																	 style:UIBarButtonItemStylePlain target:self action:@selector(showAlert)] autorelease];
+										style:UIBarButtonItemStylePlain target:self action:@selector(showAlert)] autorelease];
 	
 		UIBarItem* space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 						 UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
@@ -83,29 +84,30 @@
 	
 		[self.navigationController.view addSubview:toolbar];
 				
-	}
-	else {
-		//Set the toolbar to fit the width of the app.
-		[toolbar sizeToFit];
-		
-		//Caclulate the height of the toolbar
-		CGFloat toolbarHeight = [toolbar frame].size.height;
-		
-		//Get the bounds of the parent view
-		CGRect rootViewBounds = self.parentViewController.view.bounds;
-		
-		//Get the height of the parent view.
-		CGFloat rootViewHeight = CGRectGetHeight(rootViewBounds);
-		
-		//Get the width of the parent view,
-		CGFloat rootViewWidth = CGRectGetWidth(rootViewBounds);
-		
-		//Create a rectangle for the toolbar
-		CGRect rectArea = CGRectMake(0, rootViewHeight - toolbarHeight, rootViewWidth, toolbarHeight);
-		
-		//Reposition and resize the receiver
-		[toolbar setFrame:rectArea];	
-	}
+	//}
+//	else {
+//		//Set the toolbar to fit the width of the app.
+//		[toolbar sizeToFit];
+//		
+//		//Caclulate the height of the toolbar
+//		CGFloat toolbarHeight = [toolbar frame].size.height;
+//		
+//		//Get the bounds of the parent view
+//		CGRect rootViewBounds = self.parentViewController.view.bounds;
+//		
+//		//Get the height of the parent view.
+//		CGFloat rootViewHeight = CGRectGetHeight(rootViewBounds);
+//		
+//		//Get the width of the parent view,
+//		CGFloat rootViewWidth = CGRectGetWidth(rootViewBounds);
+//		
+//		//Create a rectangle for the toolbar
+//		CGRect rectArea = CGRectMake(0, rootViewHeight - toolbarHeight, rootViewWidth, toolbarHeight);
+//		
+//		//Reposition and resize the receiver
+//		[toolbar setFrame:rectArea];	
+//		
+//	}
 	isModal = NO;
 }
 - (void)viewDidLoad {
@@ -167,13 +169,13 @@
 		TextViewController *controller = [[TextViewController alloc] initWithContent:bio];
 		
 		
-		UINavigationController *newNavController = [[UINavigationController alloc]
-													initWithRootViewController:controller];
-		
-		newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-		[[self navigationController] presentModalViewController:newNavController
-													   animated:YES];
-		
+		//UINavigationController *newNavController = [[UINavigationController alloc]
+//													initWithRootViewController:controller];
+//		
+//		newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+//		[[self navigationController] presentModalViewController:newNavController
+//													   animated:YES];
+		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 		isModal = TRUE;
 	}
@@ -186,34 +188,29 @@
 		NSLog(credits);
 		TextViewController *controller = [[TextViewController alloc] initWithContent:credits];
 		
+
 		
-		UINavigationController *newNavController = [[UINavigationController alloc]
-													initWithRootViewController:controller];
-		newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-		[[self navigationController] presentModalViewController:newNavController
-													   animated:YES];
+		//UINavigationController *newNavController = [[UINavigationController alloc]
+		//											initWithRootViewController:controller];
+		//newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+		
+		//newNavController.modalTransitionStyle =   UIModalTransitionStyleCoverVertical;
+		//[self presentModalViewController:newNavController animated:YES];
+		//[[self navigationController] presentModalViewController:newNavController animated:YES];
+		[self.navigationController pushViewController:controller animated:YES];
+		
 		[controller release];
 		isModal = YES;	
 	}
-		else if(buttonIndex == 2) {
+	else if(buttonIndex == 2) {
 			NSLog(@"OK THEN2");
-			//NSString *filePath2 = [[NSBundle mainBundle] pathForResource:@"credits" ofType:@"json"];
-//			NSString *fileContent2 = [[NSString alloc] initWithContentsOfFile:filePath2];
-//			NSDictionary *results2 = [fileContent2 JSONValue];
-//			NSString *credits = [results2 objectForKey:@"credits"];
-//			NSLog(credits);
-//			
-//			ScrollingViewController *controller = [[ScrollingViewController alloc] init];
-//			
-//			
-//			UINavigationController *newNavController = [[UINavigationController alloc]
-//														initWithRootViewController:controller];
-//			newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-//			[[self navigationController] presentModalViewController:newNavController
-//														   animated:YES];
-//			[controller release];
-//			isModal = YES;				
-		}
+			ScrollingViewController *controller = [[ScrollingViewController alloc] initWithNibName:@"ScrollingViewController" bundle:nil];
+			//controller.delegate = self;	
+			[self.navigationController pushViewController:controller animated:YES];
+			
+			[controller release];
+	}
+	[toolbar removeFromSuperview];	
 }
 -(void) dealloc {
 	[toolbar removeFromSuperview];
