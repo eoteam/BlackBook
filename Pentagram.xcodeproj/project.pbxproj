@@ -1447,7 +1447,7 @@
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos3.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Distro3;
 		};
@@ -1456,15 +1456,15 @@
 			baseConfigurationReference = 6E7F9961118E3A6000443B46 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Map Office, LLC";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = "";
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
 				SDKROOT = iphoneos4.0;
 			};
 			name = Distro4;
@@ -1478,9 +1478,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Map Office, LLC";
 				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = "";
-				PROVISIONING_PROFILE = "072D964D-3AC8-4CA9-8092-61204B81CB45";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "072D964D-3AC8-4CA9-8092-61204B81CB45";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PROVISIONING_PROFILE = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
 				SDKROOT = iphoneos4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

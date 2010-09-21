@@ -16,6 +16,8 @@
 	IBOutlet UIPageControl* pageControl;
 	IBOutlet UITextView* contentView;
     BOOL pageControlIsChangingPage;
+	NSArray *images;
+	int currentOrientation;
 }
 @property (nonatomic, retain) UITextView *contentView;
 @property (nonatomic, retain) UIView *scrollView;

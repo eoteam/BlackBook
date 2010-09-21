@@ -13,7 +13,10 @@
 
 @implementation PhotoViewController
 
-
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return YES;
+}
 - (void)loadView {
 	[super loadView];
 	UIBarButtonItem* infoButton = [[[UIBarButtonItem alloc] initWithImage:

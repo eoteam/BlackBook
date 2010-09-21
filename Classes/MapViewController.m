@@ -4,7 +4,10 @@
 @implementation MapViewController
 
 @synthesize mapView;
-
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return YES;
+}
 -(void)viewDidLoad
 {
     [super viewDidLoad];

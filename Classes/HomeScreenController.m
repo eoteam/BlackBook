@@ -20,24 +20,36 @@
 }	
 - (void)loadView
 {
-	textFramePortrait =  CGRectMake(0.0f, 360.0f, 320.0f, 160.0f);
-	textFrameLandscape =  CGRectMake(0.0f, 240.0f, 480.0f, 115.0f);
+	textFramePortrait =  CGRectMake(0.0f, 325.0f, 320.0f, 90.0f);
+	textFrameLandscape =  CGRectMake(0.0f, 210.0f, 480.0f, 75.0f);
 	
 	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackTranslucent];
 	 
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 	
 	contentView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
 	contentView.backgroundColor = [UIColor blackColor];
 	contentView.autoresizesSubviews = YES;
-	contentView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+	contentView.contentMode = UIViewContentModeCenter;
+	//contentView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 	self.view = contentView;
     [contentView release]; 
 	
-	myImage = [[UIImageView alloc] initWithFrame:self.view.bounds];
-	[myImage setImage:[UIImage imageNamed:@"Pentagram_081710_0227_b.jpg"]];
+	UIImage *image = [UIImage imageNamed:@"Pentagram_081710_0227_b.jpg"];
+	myImage = [[UIImageView alloc] initWithImage:image];
 	myImage.opaque = YES; // explicitly opaque for performance
-	myImage.contentMode = UIViewContentModeCenter; 
+	
+	myImage.contentMode = UIViewContentModeCenter;
+	//CGRect rect = myImage.frame;
+//	CGFloat w = myImage.size.width;
+//	CGFloat h = myImage.size.height;
+//	
+//	rect.size.height = h;
+//	rect.size.width = w; 
+//	rect.origin.x = ((self.view.frame.size.width - image.size.width) / 2);
+//	rect.origin.y = ((self.view.frame.size.height - image.size.height) / 2);
+//	myImage.frame = rect; 
+	
 	myImage.autoresizesSubviews = YES;
 	[self.view addSubview:myImage];
 	[myImage release];	
@@ -62,12 +74,17 @@
 	
 	UINavigationBar *bar = [self.navigationController navigationBar];
 	self.title = @"Pentagram";
-	bar.barStyle = UIBarStyleBlackTranslucent;
+	bar.barStyle = UIBarStyleBlackOpaque;
 		
 	self.navigationItem.backBarButtonItem =
-	[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered
-									 target:nil action:nil] autorelease];
+	[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
 	
+}
+-(void) viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	UINavigationBar *bar = [self.navigationController navigationBar];
+	bar.barStyle = UIBarStyleBlackOpaque;	
 }
 - (void) didRotate:(NSNotification *)notification
 {
@@ -76,10 +93,16 @@
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 	[contentView setFrame:[[UIScreen mainScreen] applicationFrame]];
 	
-	//[myImage setFrame:[[UIScreen mainScreen] applicationFrame]];
-	myImage.height = self.view.bounds.size.height;
-	myImage.width = floor((myImage.size.width/myImage.size.height) * self.view.size.height);
-	//myImage.contentMode = UIViewContentModeScaleAspectFit;
+	myImage.contentMode = UIViewContentModeCenter;
+	//CGRect rect = myImage.frame;
+//	CGFloat w = myImage.size.width;
+//	CGFloat h = myImage.size.height;
+//	
+//	rect.size.height = h;
+//	rect.size.width = w; 
+//	rect.origin.x = (([[UIScreen mainScreen] applicationFrame].size.width - myImage.image.size.width) / 2);
+//	rect.origin.y = (([[UIScreen mainScreen] applicationFrame].size.height - myImage.image.size.height) / 2);
+//	myImage.frame = rect; 
 	
 	
 	NSLog(@"orientationDID %i",currentOrientation);
@@ -106,7 +129,7 @@
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return YES;
+	return NO;
 }
 
 @end
