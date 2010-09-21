@@ -9,6 +9,7 @@
 #import "PhotoViewController.h"
 #import "TextViewController.h"
 #import "MockPhotoSource.h"
+#import "ScrollingViewController.h"
 
 @implementation PhotoViewController
 
@@ -117,12 +118,12 @@
 		}
 		else if(buttonIndex == 2) {
 			NSLog(@"OK THEN2");
-			//			InfoViewController *controller = [[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil];
-			//			controller.delegate = self;
-			//			controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-			//			[self presentModalViewController:controller animated:YES];
-			//			[controller release];			
-		}	
+			ScrollingViewController *controller = [[ScrollingViewController alloc] initWithNibName:@"ScrollingViewController" bundle:nil];
+			//controller.delegate = self;	
+			[self.navigationController pushViewController:controller animated:YES];
+			
+			[controller release];
+		}
 	}
 	else {
 		if (buttonIndex == 0) {

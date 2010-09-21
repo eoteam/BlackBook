@@ -65,18 +65,18 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrameSize">{320, 204}</string>
 						<reference key="NSSuperview" ref="774585933"/>
-						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIPagingEnabled">YES</bool>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIShowsVerticalScrollIndicator">NO</bool>
+						<float key="IBUIMaximumZoomScale">2</float>
 						<bool key="IBUIBouncesZoom">NO</bool>
 					</object>
 					<object class="IBUITextView" id="158735826">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, 240}, {320, 240}}</string>
+						<string key="NSFrame">{{0, 240}, {320, 220}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="IBUIBackgroundColor" ref="686538177"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -547,7 +547,7 @@
 			<integer value="3000" key="NS.object.0"/>
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
-		<string key="IBDocument.LastKnownRelativeProjectPath">Pentagram.xcodeproj</string>
+		<string key="IBDocument.LastKnownRelativeProjectPath">../../Pentagram.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<string key="IBCocoaTouchPluginVersion">117</string>
 	</data>
