@@ -1,6 +1,5 @@
 #import "AppDelegate.h"
-#import "HomeScreenController.h"
-#import "GridViewController.h"
+#import "SplashViewController.h"
 
 @implementation AppDelegate
 
@@ -14,12 +13,10 @@
 
   TTURLMap* map = navigator.URLMap;
   [map from:@"*" toViewController:[TTWebController class]];
-  [map from:@"tt://catalog" toViewController:[HomeScreenController class]];
-  [map from:@"tt://photoTest2" toViewController:[GridViewController class]];
-
+  [map from:@"tt://slash" toViewController:[SplashViewController class]];
 
   if (![navigator restoreViewControllers]) {
-    [navigator openURLAction:[TTURLAction actionWithURLPath:@"tt://catalog"]];
+    [navigator openURLAction:[TTURLAction actionWithURLPath:@"tt://slash"]];
   }
 }
 

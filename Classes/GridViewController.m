@@ -45,8 +45,6 @@
 	
 	[super viewDidAppear:animated];
 	
-	//if(isModal == NO) {
-		//Initialize the toolbar
 		toolbar = [[UIToolbar alloc] init];
 		toolbar.barStyle =  UIBarStyleBlackTranslucent;
 	
@@ -70,44 +68,16 @@
 	
 		//Reposition and resize the receiver
 		[toolbar setFrame:rectArea];	
-	
-	
-		UIBarButtonItem* _nextButton = [[[UIBarButtonItem alloc] initWithImage:
-									 [UIImage imageNamed:@"19-gear.png"]
-										style:UIBarButtonItemStylePlain target:self action:@selector(showAlert)] autorelease];
-	
+
+		UIButton *helpButton =  [UIButton buttonWithType:UIButtonTypeInfoLight ] ;
+		[helpButton addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchUpInside];
+		UIBarButtonItem* infoButton = [[[UIBarButtonItem alloc] initWithCustomView:helpButton] autorelease];
 		UIBarItem* space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 						 UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
 	
-	
-		[toolbar setItems:[NSArray arrayWithObjects:space, _nextButton, nil]];
-	
+		[toolbar setItems:[NSArray arrayWithObjects:space, infoButton, nil]];
 		[self.navigationController.view addSubview:toolbar];
 				
-	//}
-//	else {
-//		//Set the toolbar to fit the width of the app.
-//		[toolbar sizeToFit];
-//		
-//		//Caclulate the height of the toolbar
-//		CGFloat toolbarHeight = [toolbar frame].size.height;
-//		
-//		//Get the bounds of the parent view
-//		CGRect rootViewBounds = self.parentViewController.view.bounds;
-//		
-//		//Get the height of the parent view.
-//		CGFloat rootViewHeight = CGRectGetHeight(rootViewBounds);
-//		
-//		//Get the width of the parent view,
-//		CGFloat rootViewWidth = CGRectGetWidth(rootViewBounds);
-//		
-//		//Create a rectangle for the toolbar
-//		CGRect rectArea = CGRectMake(0, rootViewHeight - toolbarHeight, rootViewWidth, toolbarHeight);
-//		
-//		//Reposition and resize the receiver
-//		[toolbar setFrame:rectArea];	
-//		
-//	}
 	isModal = NO;
 }
 - (void)viewDidLoad {
@@ -136,9 +106,6 @@
 	}
     self.photoSource = [[MockPhotoSource alloc]
 						initWithType:MockPhotoSourceNormal
-						//initWithType:MockPhotoSourceDelayed
-						// initWithType:MockPhotoSourceLoadError
-						// initWithType:MockPhotoSourceDelayed|MockPhotoSourceLoadError
 						title:@"Eddie Opara"
 						photos:images
 						photos2:nil
@@ -152,65 +119,43 @@
 										otherButtonTitles:@"Bio", @"Credits",@"New York Office", nil];
 	
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
-	//actionSheet.destructiveButtonIndex = 1;	// make the second button red (destructive)
-	[actionSheet showInView:self.view]; // show from our table view (pops up in the middle of the table)
+	[actionSheet showInView:self.view];
 	[actionSheet release];	
 
 }
 //UIAlert methods
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-	printf("User Pressed Button %d\n", buttonIndex);
 	if (buttonIndex == 0) {
 		NSString *filePath = [[NSBundle mainBundle] pathForResource:@"bio" ofType:@"json"];
 		NSString *fileContent = [[NSString alloc] initWithContentsOfFile:filePath];
 		NSDictionary *results = [fileContent JSONValue];
 		NSString *bio = [results objectForKey:@"bio"];
 		TextViewController *controller = [[TextViewController alloc] initWithContent:bio];
-		
-		
-		//UINavigationController *newNavController = [[UINavigationController alloc]
-//													initWithRootViewController:controller];
-//		
-//		newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-//		[[self navigationController] presentModalViewController:newNavController
-//													   animated:YES];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 		isModal = TRUE;
 	}
 	else if(buttonIndex == 1) {
-		NSLog(@"OK THEN");
 		NSString *filePath2 = [[NSBundle mainBundle] pathForResource:@"credits" ofType:@"json"];
 		NSString *fileContent2 = [[NSString alloc] initWithContentsOfFile:filePath2];
 		NSDictionary *results2 = [fileContent2 JSONValue];
 		NSString *credits = [results2 objectForKey:@"credits"];
 		NSLog(credits);
 		TextViewController *controller = [[TextViewController alloc] initWithContent:credits];
-		
-
-		
-		//UINavigationController *newNavController = [[UINavigationController alloc]
-		//											initWithRootViewController:controller];
-		//newNavController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-		
-		//newNavController.modalTransitionStyle =   UIModalTransitionStyleCoverVertical;
-		//[self presentModalViewController:newNavController animated:YES];
-		//[[self navigationController] presentModalViewController:newNavController animated:YES];
 		[self.navigationController pushViewController:controller animated:YES];
-		
 		[controller release];
 		isModal = YES;	
 	}
 	else if(buttonIndex == 2) {
-			NSLog(@"OK THEN2");
-			ScrollingViewController *controller = [[ScrollingViewController alloc] initWithNibName:@"ScrollingViewController" bundle:nil];
-			//controller.delegate = self;	
-			[self.navigationController pushViewController:controller animated:YES];
-			
-			[controller release];
+		ScrollingViewController *controller = [[ScrollingViewController alloc] initWithNibName:@"ScrollingViewController" bundle:nil];
+		[self.navigationController pushViewController:controller animated:YES];
+		[controller release];
+		isModal = YES;
 	}
-	[toolbar removeFromSuperview];	
+	if(isModal == YES)
+		[toolbar removeFromSuperview];
+	
 }
 -(void) dealloc {
 	[toolbar removeFromSuperview];

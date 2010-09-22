@@ -14,12 +14,12 @@
 {
 	IBOutlet UIScrollView* scrollView;
 	IBOutlet UIPageControl* pageControl;
-	IBOutlet UITextView* contentView;
+	IBOutlet UIWebView* contentView;
     BOOL pageControlIsChangingPage;
 	NSArray *images;
 	int currentOrientation;
 }
-@property (nonatomic, retain) UITextView *contentView;
+@property (nonatomic, retain) UIWebView *contentView;
 @property (nonatomic, retain) UIView *scrollView;
 @property (nonatomic, retain) UIPageControl* pageControl;
 

@@ -27,16 +27,7 @@
 	{
 		self.title = @"Eddie Opara";
 		[self setContent: c];
-		NSLog(content);
-		NSLog(@"#######################INIT");
-		
-//		UIView *contentView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
-//		contentView.backgroundColor = [UIColor blackColor];
-//		contentView.autoresizesSubviews = YES;
-//		//contentView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-//		self.view = contentView;
-//		[contentView release]; 	
-		
+
 		textView = [[UITextView alloc] initWithFrame:self.view.bounds];
 		textView.text = content;
 		textView.editable = NO;
@@ -45,21 +36,16 @@
 		textView.backgroundColor = [UIColor blackColor];
 		textView.autoresizesSubviews = YES;
 		self.view = textView;	
-		[textView release];	
-		
-	
-		//UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] 
-//										 initWithTitle:@"Close"
-//										 style: UIBarButtonItemStyleBordered
-//										 target:self 
-//										 action:@selector(cancel)];
-//		[cancelButton setTitle:@"Close"];
-//		[[self navigationItem] setLeftBarButtonItem:cancelButton];
-//		[cancelButton release];
-				
+		[textView release];		
 	}
 	return self;	
 }
+-(void) viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	UINavigationBar *bar = [self.navigationController navigationBar];
+	bar.barStyle = UIBarStyleBlackOpaque;	
+}	
 -(void) loadView {	
 	UINavigationBar *bar = [self.navigationController  navigationBar];
 	bar.barStyle = UIBarStyleBlackTranslucent;	
@@ -73,7 +59,10 @@
 {
 	return YES;
 }
-
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
+    // Release anything that's not essential, such as cached data
+}
 - (void)cancel
 {
     [self dismissModalViewControllerAnimated:YES];

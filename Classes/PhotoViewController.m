@@ -19,9 +19,9 @@
 }
 - (void)loadView {
 	[super loadView];
-	UIBarButtonItem* infoButton = [[[UIBarButtonItem alloc] initWithImage:
-									 [UIImage imageNamed:@"19-gear.png"]
-																	 style:UIBarButtonItemStylePlain target:self action:@selector(showAlert)] autorelease];
+	UIButton *helpButton =  [UIButton buttonWithType:UIButtonTypeInfoLight ] ;
+	[helpButton addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchUpInside];
+	UIBarButtonItem* infoButton = [[[UIBarButtonItem alloc] initWithCustomView:helpButton] autorelease];
 	
 	UIBarItem* space = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
 						 UIBarButtonSystemItemFlexibleSpace target:nil action:nil] autorelease];
