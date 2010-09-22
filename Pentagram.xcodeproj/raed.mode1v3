@@ -275,7 +275,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
+									<integer>8</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -318,7 +318,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ScrollingViewController.m</string>
+								<string>ScrollingViewController.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,11 +326,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ScrollingViewController.m</string>
+										<string>ScrollingViewController.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>807C7463124AC283001FEBCA</string>
+										<string>807C747C124AC302001FEBCA</string>
 										<key>history</key>
 										<array>
 											<string>8072013312486531006465E5</string>
@@ -357,9 +357,9 @@
 											<string>808251CE124ABE1A006EE5C8</string>
 											<string>808251D6124ABEF9006EE5C8</string>
 											<string>808251D7124ABEF9006EE5C8</string>
-											<string>808251E7124AC0E7006EE5C8</string>
 											<string>808251EA124AC158006EE5C8</string>
-											<string>808251EF124AC256006EE5C8</string>
+											<string>807C747B124AC302001FEBCA</string>
+											<string>808251E7124AC0E7006EE5C8</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -557,6 +557,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>80F51F71123EB2D90083C609</string>
 		<string>/Users/raed/Sites/Pentagram/three20/samples/Pentagram/Pentagram.xcodeproj</string>
 	</array>
@@ -760,13 +762,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>80824FC8124AA429006EE5C8</string>
+				<string>807C7472124AC2BA001FEBCA</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>80824FC9124AA429006EE5C8</string>
-				<string>80824FCA124AA429006EE5C8</string>
-				<string>80824FCB124AA429006EE5C8</string>
-				<string>80824FCC124AA429006EE5C8</string>
-				<string>80824FCD124AA429006EE5C8</string>
+				<string>807C7473124AC2BA001FEBCA</string>
+				<string>807C7474124AC2BA001FEBCA</string>
+				<string>807C7475124AC2BA001FEBCA</string>
+				<string>807C7476124AC2BA001FEBCA</string>
+				<string>807C7477124AC2BA001FEBCA</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -893,8 +895,6 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -930,7 +930,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>80824FCE124AA429006EE5C8</string>
+				<string>807C7478124AC2BA001FEBCA</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -940,7 +940,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
