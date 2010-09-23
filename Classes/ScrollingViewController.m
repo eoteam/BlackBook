@@ -45,8 +45,6 @@
 	[self setupPage];
     [super viewDidLoad];
 }
-
-
 - (void)didReceiveMemoryWarning 
 {
     [super didReceiveMemoryWarning];
@@ -61,7 +59,7 @@
 
 
 - (void)dealloc 
-{
+{	
     [super dealloc];
 }
 
@@ -126,8 +124,6 @@
 		[pageControl setFrame:CGRectMake(0.0f, 124.0f,480.0f, 36.0f)];
 		[contentView setFrame:CGRectMake(0.0f, 160.0f,480.0f, 160.0f)];
 	}
-	
-	NSUInteger count = 0;
 	CGFloat cx = 0;
 	for (NSDictionary *img in images) {
 		
@@ -159,12 +155,12 @@
 	[scrollView setContentSize:CGSizeMake(cx, [scrollView bounds].size.height)];
 	
 	self.pageControl.numberOfPages = [images count];
-	//NSString* kText = @"info@pentagram.com";
-	NSString* kText = @"<p>204 Fifth Avenue<br />New York NY 10010</p><p><span	style=\"text-decoration: none;color: #f00;\">T +212 683 7000</span><br /><span	style=\"text-decoration: none;color: #f00;\">F +212 532 0181</span><br />E <a style=\"text-decoration: none;color: #f00;\" href=\"mailto:info@pentagram.com\">info@pentagram.com</a></p><h3>Location</h3><p>Flatiron district. Our office is a five-story building between 25th and 26th Streets, directly across from Madison Square Park.</p><h3>Directions via public transport</h3><p>From N/R/W subway station at 23rd Street, walk north two blocks from the intersection of Fifth Avenue and Broadway. Our building is marked with a letter P banner.</p>";
+	//filePath = [[NSBundle mainBundle] pathForResource:@"office" ofType:@"html"];
+	//fileContent = [[NSString alloc] initWithContentsOfFile:filePath];
 	[contentView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"office" ofType:@"html"]isDirectory:NO]]];
- 	//[contentView loadHTMLString:kText];// baseURL:<#(NSURL *)baseURL#>
+
 	//contentView.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0f];
-	//contentView.dataDetectorTypes = UIDataDetectorTypeAll;
+	//[contentView setContentToHTMLString:fileContent];
 }
 -(void) showMap
 {

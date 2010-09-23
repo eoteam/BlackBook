@@ -13,12 +13,19 @@
 
 @implementation PhotoViewController
 
+- (void)showBars:(BOOL)show animated:(BOOL)animated {
+	[super showBars:show animated:animated];
+	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+}
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
 }
+
 - (void)loadView {
+	
 	[super loadView];
+	
 	UIButton *helpButton =  [UIButton buttonWithType:UIButtonTypeInfoLight ] ;
 	[helpButton addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchUpInside];
 	UIBarButtonItem* infoButton = [[[UIBarButtonItem alloc] initWithCustomView:helpButton] autorelease];

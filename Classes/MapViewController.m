@@ -15,7 +15,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-	[self reverseGeocodeCurrentLocation];
+	[self showPin];
 	self.title = @"New York Office";
     mapView.showsUserLocation = NO;
 }
@@ -31,7 +31,7 @@
     [super dealloc];
 }
 
-- (void)reverseGeocodeCurrentLocation
+- (void)showPin
 {
 	CLLocationCoordinate2D coord;
 	coord.latitude = 40.74303f;

@@ -134,14 +134,13 @@
 		TextViewController *controller = [[TextViewController alloc] initWithContent:bio];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
-		isModal = TRUE;
+		isModal = YES;
 	}
 	else if(buttonIndex == 1) {
 		NSString *filePath2 = [[NSBundle mainBundle] pathForResource:@"credits" ofType:@"json"];
 		NSString *fileContent2 = [[NSString alloc] initWithContentsOfFile:filePath2];
 		NSDictionary *results2 = [fileContent2 JSONValue];
 		NSString *credits = [results2 objectForKey:@"credits"];
-		NSLog(credits);
 		TextViewController *controller = [[TextViewController alloc] initWithContent:credits];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];

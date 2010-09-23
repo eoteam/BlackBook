@@ -27,7 +27,9 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
 	[[self navigationController] setNavigationBarHidden:YES animated:NO];
-	[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackTranslucent];
+	
+	//[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackTranslucent];
+	[[UIApplication sharedApplication] setStatusBarHidden:YES];
 	
 	// Init the view
 	CGRect appFrame = [[UIScreen mainScreen] applicationFrame];
@@ -118,7 +120,9 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc 
+{
+	[viewController release];
     [super dealloc];
 }
 

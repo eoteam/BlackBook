@@ -14,6 +14,7 @@
 	UITextView *textView;
 }
 @property (copy) NSString *content;
+@property(nonatomic,retain) UITextView *textView;
 
 -(id)initWithContent:(NSString *)content;
 @end

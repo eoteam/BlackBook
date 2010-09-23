@@ -11,6 +11,9 @@
 
 @implementation TextViewController
 
+@synthesize textView;
+
+
 - (NSString *)content { 
 	return content;
 } 
@@ -67,5 +70,15 @@
 {
     [self dismissModalViewControllerAnimated:YES];
 }
+- (void)viewDidUnload 
+{
+	[textView release];
+}
+
+- (void)dealloc 
+{
+	[super dealloc];
+}
+
 
 @end
