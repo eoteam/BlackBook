@@ -18,7 +18,7 @@
 #pragma mark UIView boilerplate
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return YES;
+	return  (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 -(void) loadView
 {
@@ -34,7 +34,7 @@
 											 action:@selector(showMap)];
 	[[self navigationItem] setRightBarButtonItem:mapButton];
 	[mapButton release];
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
+	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
 	
 	
 	UINavigationBar *bar = [self.navigationController navigationBar];
@@ -71,31 +71,28 @@
     currentOrientation =  [[UIDevice currentDevice] orientation];
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 	
+	int w = 320; int h = 204;
+	int i = 0;
+
 	if(currentOrientation == 3 || currentOrientation == 4) {
+		w = 480; h = 135;
 		[scrollView setFrame: CGRectMake(0.0f,0.0f,480.0f,135.0f)];
 		[pageControl setFrame:CGRectMake(0.0f, 124.0f,480.0f, 36.0f)];
 		[contentView setFrame:CGRectMake(0.0f, 160.0f,480.0f, 160.0f)];	
 	}
 	else if(currentOrientation == 0 || currentOrientation == 1 || currentOrientation == 2) {
+		w = 320; h = 204;
 		[scrollView setFrame: CGRectMake(0.0f,0.0f,320.0f,204.0f)];
 		[pageControl setFrame:CGRectMake(0.0f, 204.0f,320.0f, 36.0f)];
 		[contentView setFrame:CGRectMake(0.0f, 240.0f,320.0f, 240.0f)];
 	}
 	CGFloat cx = 0;
 	for (UIImageView *imageView in scrollView.subviews) {
-		imageView.contentMode = UIViewContentModeScaleAspectFit;
-		UIImage *image = imageView.image;
-		CGRect rect = imageView.frame;
-		rect.size.height = image.size.height;
-		rect.size.width = image.size.width;
-		rect.origin.x = ((scrollView.frame.size.width - image.size.width) / 2) + cx;
-		rect.origin.y = ((scrollView.frame.size.height - image.size.height) / 2);
-		
-		imageView.frame = rect;
+		imageView.frame = CGRectMake( w * i++, 0, w, h);
 		cx += scrollView.frame.size.width;
 		
 	}
-	[scrollView setContentSize:CGSizeMake(cx, [scrollView bounds].size.height)];
+	[scrollView setContentSize:CGSizeMake(cx,204)];
 }
 - (void)setupPage
 {
@@ -117,42 +114,48 @@
 	scrollView.scrollEnabled = YES;
 	scrollView.pagingEnabled = YES;
 	
+	int w = 320; int h = 204;
 	CGRect f = CGRectMake(0.0f,0.0f,320.0f,204.0f);
 	if(currentOrientation == 3 || currentOrientation == 4) {
+		w = 480; h = 135;
 		f = CGRectMake(0.0f,0.0f,480.0f,135.0f);
 		[scrollView setFrame:f];
 		[pageControl setFrame:CGRectMake(0.0f, 124.0f,480.0f, 36.0f)];
 		[contentView setFrame:CGRectMake(0.0f, 160.0f,480.0f, 160.0f)];
 	}
+	NSLog(@"WTF dimensions %d %d",w,h);
 	CGFloat cx = 0;
+	int i = 0;
 	for (NSDictionary *img in images) {
 		
-		NSString *i =  [img objectForKey:@"name"];	
+		NSString *file =  [img objectForKey:@"name"];	
 		//NSMutableString *path = [NSMutableString string];
 		//[path appendString:@"bundle://"];
 		//[path appendString:i];
 		//NSLog(path);
-		UIImage *image = [UIImage imageNamed:i];
+		UIImage *image = [UIImage imageNamed:file];
 		
 		UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
-		CGRect rect = imageView.frame;
-		CGFloat w = image.size.width;
-		CGFloat h = image.size.height;
-	
-		rect.size.height = h;
-		rect.size.width = w; 
-		rect.origin.x = ((f.size.width - image.size.width) / 2) + cx;
-		rect.origin.y = ((f.size.height - image.size.height) / 2);
-
-		imageView.frame = rect;
-		//NSLog("image size, w:%f h:%f",w,h);	
+		imageView.clipsToBounds = YES;
+		imageView.frame = CGRectMake( w * i++, 0, w, h);
+		//CGRect rect = imageView.frame;
+//		CGFloat w = image.size.width;
+//		CGFloat h = image.size.height;
+//	
+//		rect.size.height = h;
+//		rect.size.width = w; 
+//		rect.origin.x = ((f.size.width - image.size.width) / 2) + cx;
+//		rect.origin.y = ((f.size.height - image.size.height) / 2);
+//
+//		imageView.frame = rect;
+//		//NSLog("image size, w:%f h:%f",w,h);	
 		[scrollView addSubview:imageView];
 		[imageView release];
 
 		cx += f.size.width;
 	}
-	[scrollView setContentSize:CGSizeMake(cx, [scrollView bounds].size.height)];
+	[scrollView setContentSize:CGSizeMake(cx, 204)];
 	
 	self.pageControl.numberOfPages = [images count];
 	//filePath = [[NSBundle mainBundle] pathForResource:@"office" ofType:@"html"];

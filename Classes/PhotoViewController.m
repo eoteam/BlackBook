@@ -74,7 +74,7 @@
 -(void) showEmailMenu {
 	UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Share"
 															 delegate:self cancelButtonTitle:@"Close" destructiveButtonTitle:nil
-													otherButtonTitles:@"Email", nil];
+													otherButtonTitles:@"Email",@"Save to Library", nil];
 	
 	actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
 	//actionSheet.destructiveButtonIndex = 1;	// make the second button red (destructive)
@@ -136,14 +136,16 @@
 		}
 	}
 	else {
+		NSString *image = [(MockPhoto *)_centerPhoto  URLForVersion:TTPhotoVersionLarge];
+		image = [image substringFromIndex:9];
 		if (buttonIndex == 0) {
 			MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
 			picker.mailComposeDelegate = self;
 			
 			[picker setSubject:@"Eddie Opara's work"];
-			NSString *image = [(MockPhoto *)_centerPhoto  URLForVersion:TTPhotoVersionLarge];
+			
 			NSString *caption = [(MockPhoto *)_centerPhoto  caption];	
-			image = [image substringFromIndex:9];
+			
 			
 			
 			UIImage *roboPic = [UIImage imageNamed:image];
@@ -156,11 +158,24 @@
 			[self presentModalViewController:picker animated:YES];
 			[picker release];
 		}
+		else {
+			UIImage *imgFile = [UIImage imageNamed:image];
+			UIImageWriteToSavedPhotosAlbum(imgFile, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+		}
 		
 	}
 }
 -(void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error {
 	[self dismissModalViewControllerAnimated:YES];
 }
-
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+  //  UIAlertView *alertView = [[UIAlertView alloc] 
+//							  initWithTitle:NSLocalizedString(@"Galo!!!",@"Saved image message: title")
+//							  message:NSLocalizedString(@"Now, check your \"saved photos\" group at \"photos\" app in your iPhone and select the actions menu > set as wallpaper.",@"Saved image message")
+//							  delegate:nil
+//							  cancelButtonTitle:NSLocalizedString(@"OK",@"OK Button")
+//							  otherButtonTitles:nil];
+//	[alertView show];
+//	[alertView release];
+}
 @end

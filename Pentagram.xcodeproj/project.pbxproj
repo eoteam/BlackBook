@@ -515,6 +515,7 @@
 		8036939A124BF8370099F1DC /* th_view_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = th_view_3.jpg; sourceTree = "<group>"; };
 		803693E4124BF90C0099F1DC /* ucla_new_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ucla_new_4.jpg; sourceTree = "<group>"; };
 		803693E6124BF9190099F1DC /* th_ucla_new_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = th_ucla_new_4.jpg; sourceTree = "<group>"; };
+		8050A2B3124D49F7005EB590 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		8082506C124AAD5B006EE5C8 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
 		8082506D124AAD5B006EE5C8 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		80825080124AAE17006EE5C8 /* Splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Splash.png; path = Resources/Splash.png; sourceTree = "<group>"; };
@@ -643,6 +644,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				8050A2B3124D49F7005EB590 /* Entitlements.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -1055,6 +1057,7 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Pentagram" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -1445,6 +1448,7 @@
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "~/Sites/Pentagram/three20/samples/Pentagram/Entitlements.plist";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1462,6 +1466,7 @@
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "~/Sites/Pentagram/three20/samples/Pentagram/Entitlements.plist";
 				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
@@ -1470,88 +1475,99 @@
 			};
 			name = Release;
 		};
-		80298FF81243E08A001C0591 /* Distro3 */ = {
+		8050A2A5124D4825005EB590 /* Distribution4 */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9961118E3A6000443B46 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos3.2;
 			};
-			name = Distro3;
+			name = Distribution4;
 		};
-		80298FF91243E08A001C0591 /* Distro3 */ = {
+		8050A2A6124D4825005EB590 /* Distribution4 */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
-				PROVISIONING_PROFILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.1;
+				PROVISIONING_PROFILE = "B30DCD1E-F56D-4BBC-8BE7-109481F0E600";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos3.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				SDKROOT = iphoneos4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Distro3;
+			name = Distribution4;
 		};
-		80DC538F12443B270099684E /* Distro4 */ = {
+		8050A2ED124D56DF005EB590 /* Distribution3 */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9961118E3A6000443B46 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Map Office, LLC";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = "";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PREBINDING = NO;
-				PROVISIONING_PROFILE = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
-				SDKROOT = iphoneos4.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos4.1;
 			};
-			name = Distro4;
+			name = Distribution3;
 		};
-		80DC539012443B270099684E /* Distro4 */ = {
+		8050A2EE124D56DF005EB590 /* Distribution3 */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9960118E3A6000443B46 /* App.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: The Map Office, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				INFOPLIST_FILE = Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
-				PROVISIONING_PROFILE = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "598656A1-C55D-43B1-84B6-24D4B9CFB6DE";
-				SDKROOT = iphoneos4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1;
+				PROVISIONING_PROFILE = "E6D1C89D-5B9D-4E70-844F-11398AA019A5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Distro4;
+			name = Distribution3;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E7F9961118E3A6000443B46 /* Project.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: The Map Office, LLC";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator4.0;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos4.1;
 			};
 			name = Debug;
 		};
@@ -1578,8 +1594,8 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
-				80298FF91243E08A001C0591 /* Distro3 */,
-				80DC539012443B270099684E /* Distro4 */,
+				8050A2A6124D4825005EB590 /* Distribution4 */,
+				8050A2EE124D56DF005EB590 /* Distribution3 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1589,8 +1605,8 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
-				80298FF81243E08A001C0591 /* Distro3 */,
-				80DC538F12443B270099684E /* Distro4 */,
+				8050A2A5124D4825005EB590 /* Distribution4 */,
+				8050A2ED124D56DF005EB590 /* Distribution3 */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

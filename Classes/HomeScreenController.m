@@ -81,7 +81,7 @@
 
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return  (interfaceOrientation == UIInterfaceOrientationPortrait);
+	return  (interfaceOrientation == (UIInterfaceOrientationPortrait || UIInterfaceOrientationPortraitUpsideDown));
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview

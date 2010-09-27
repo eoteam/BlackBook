@@ -11,7 +11,7 @@
 	<key>CFBundleIconFile</key>
 	<string>app_icon_iphone4.png</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.facebook.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>com.pentagram.blackbook</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
