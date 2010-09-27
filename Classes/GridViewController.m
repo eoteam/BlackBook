@@ -1,7 +1,7 @@
 #import "GridViewController.h"
 #import "MockPhotoSource.h"
 #import "TextViewController.h"
-#import "ScrollingViewController.h"
+#import "OfficeViewController.h"
 
 @implementation GridViewController
 
@@ -147,7 +147,7 @@
 		isModal = YES;	
 	}
 	else if(buttonIndex == 2) {
-		ScrollingViewController *controller = [[ScrollingViewController alloc] initWithNibName:@"ScrollingViewController" bundle:nil];
+		OfficeViewController *controller = [[OfficeViewController alloc] initWithNibName:@"OfficeViewController" bundle:nil];
 		[self.navigationController pushViewController:controller animated:YES];
 		[controller release];
 		isModal = YES;

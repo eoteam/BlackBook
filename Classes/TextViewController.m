@@ -21,8 +21,9 @@
 	content = value;
 }
 
-- (id)init { 
-	return [self initWithContent:@"CRAAP"];
+- (id)init 
+{ 
+	return [self initWithContent:@"test"];
 }	
 -(id) initWithContent:(NSString *)c 
 {
@@ -62,9 +63,9 @@
 {
 	return YES;
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+- (void)didReceiveMemoryWarning 
+{
+    [super didReceiveMemoryWarning];
 }
 - (void)cancel
 {
@@ -74,7 +75,6 @@
 {
 	[textView release];
 }
-
 - (void)dealloc 
 {
 	[super dealloc];

@@ -21,11 +21,8 @@
     }
     return self;
 }
-
-
-
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
+- (void)loadView
+{
 	[[self navigationController] setNavigationBarHidden:YES animated:NO];
 	
 	//[[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleBlackTranslucent];
@@ -49,38 +46,33 @@
 	timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(fadeScreen) userInfo:nil repeats:NO];
 }
 
--(void) onTimer{
+-(void) onTimer
+{
 	NSLog(@"LOAD");
 }
-
 - (void)fadeScreen
 {
-	[UIView beginAnimations:nil context:nil]; // begins animation block
-	[UIView setAnimationDuration:0.75];        // sets animation duration
-	[UIView setAnimationDelegate:self];        // sets delegate for this block
-	[UIView setAnimationDidStopSelector:@selector(finishedFading)];   // calls the finishedFading method when the animation is done (or done fading out)	
-	self.view.alpha = 0.0;       // Fades the alpha channel of this view to "0.0" over the animationDuration of "0.75" seconds
-	[UIView commitAnimations];   // commits the animation block.  This Block is done.
+	[UIView beginAnimations:nil context:nil]; 
+	[UIView setAnimationDuration:0.75];      
+	[UIView setAnimationDelegate:self];  
+	[UIView setAnimationDidStopSelector:@selector(finishedFading)];  
+	self.view.alpha = 0.0;  
+	[UIView commitAnimations];
 }
-
-
 - (void) finishedFading
-{
-	
-	[UIView beginAnimations:nil context:nil]; // begins animation block
-	[UIView setAnimationDuration:0.75];        // sets animation duration
-	self.view.alpha = 1.0;   // fades the view to 1.0 alpha over 0.75 seconds
+{	
+	[UIView beginAnimations:nil context:nil]; 
+	[UIView setAnimationDuration:0.75];
+	self.view.alpha = 1.0;
 	viewController.view.alpha = 1.0;
-	[UIView commitAnimations];   // commits the animation block.  This Block is done.
+	[UIView commitAnimations];
 	[splashImageView removeFromSuperview];
 	self.title = @"Pentagram";
 	UINavigationBar *bar = [self.navigationController navigationBar];
 	self.title = @"Pentagram";
 	bar.barStyle = UIBarStyleBlackOpaque;
-	
 	self.navigationItem.backBarButtonItem =
 	[[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil] autorelease];
-	
 	[[self navigationController] setNavigationBarHidden:NO animated:YES];
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -96,36 +88,16 @@
 	UINavigationBar *bar = [self.navigationController navigationBar];
 	bar.barStyle = UIBarStyleBlackOpaque;	
 }
-/*
- // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 -(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return  (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown);
 }
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning]; // Releases the view if it doesn't have a superview
-    // Release anything that's not essential, such as cached data
+    [super didReceiveMemoryWarning];
 }
-
-
 - (void)dealloc 
 {
 	[viewController release];
     [super dealloc];
 }
-
-
 @end

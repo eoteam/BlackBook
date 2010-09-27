@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Three20/Three20.h>
 
-@interface ScrollingViewController : UIViewController
+@interface OfficeViewController : UIViewController
 <UIScrollViewDelegate>
 {
 	IBOutlet UIScrollView* scrollView;

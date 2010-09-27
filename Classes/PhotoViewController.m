@@ -9,7 +9,7 @@
 #import "PhotoViewController.h"
 #import "TextViewController.h"
 #import "MockPhotoSource.h"
-#import "ScrollingViewController.h"
+#import "OfficeViewController.h"
 
 @implementation PhotoViewController
 
@@ -128,7 +128,7 @@
 		}
 		else if(buttonIndex == 2) {
 			NSLog(@"OK THEN2");
-			ScrollingViewController *controller = [[ScrollingViewController alloc] initWithNibName:@"ScrollingViewController" bundle:nil];
+			OfficeViewController *controller = [[OfficeViewController alloc] initWithNibName:@"OfficeViewController" bundle:nil];
 			//controller.delegate = self;	
 			[self.navigationController pushViewController:controller animated:YES];
 			

@@ -6,10 +6,10 @@
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
-#import "ScrollingViewController.h"
+#import "OfficeViewController.h"
 #import "MapViewController.h"
 
-@implementation ScrollingViewController
+@implementation OfficeViewController
 @synthesize scrollView;
 @synthesize pageControl;
 @synthesize contentView;

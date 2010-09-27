@@ -38,8 +38,13 @@
 	NSLog(@"orientation %i",currentOrientation);
 	
 	frontLabel = [[UITextView alloc] initWithFrame:textFramePortrait];
-	NSString *bio = @"Eddie Opara, has joined Pentagram as a partner. He becomes the seventh principal in Pentagram's New York office, where his team will be based. He joins Pentagram from his own studio, The Map Office, which he established in 2005.";
-	frontLabel.text = bio;
+	NSString *filePath = [[NSBundle mainBundle] pathForResource:@"intro" ofType:@"json"];
+	NSString *fileContent = [[NSString alloc] initWithContentsOfFile:filePath];
+	NSLog(fileContent);
+	NSDictionary *results = [fileContent JSONValue];
+	NSString *intro = [results objectForKey:@"intro"];
+	frontLabel.text = intro;
+	frontLabel.userInteractionEnabled = NO;
 	frontLabel.editable = NO;
 	frontLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0f];
 	frontLabel.textColor = [UIColor whiteColor];

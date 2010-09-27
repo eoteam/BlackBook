@@ -12,7 +12,7 @@
     
     <!--- Custom entitlements below --->
 	 <key>get-task-allow</key>
-    <string>NO</string>
+	 <false />
 
 </dict>
 </plist>
