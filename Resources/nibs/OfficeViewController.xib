@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="26"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -65,6 +65,7 @@
 						<int key="NSvFlags">268</int>
 						<string key="NSFrameSize">{320, 204}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="IBUIBackgroundColor" ref="686538177"/>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIPagingEnabled">YES</bool>
@@ -134,6 +135,7 @@
 							<reference key="NSCustomColorSpace" ref="1049779694"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<bool key="IBUIScalesPageToFit">YES</bool>
 						<int key="IBUIDataDetectorTypes">1</int>
 						<bool key="IBUIDetectsPhoneNumbers">YES</bool>
 					</object>
@@ -218,8 +220,8 @@
 							<reference ref="480349846"/>
 							<reference ref="920241415"/>
 							<reference ref="553891900"/>
-							<reference ref="864562870"/>
 							<reference ref="865105554"/>
+							<reference ref="864562870"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -276,7 +278,7 @@
 					<object class="NSAffineTransform">
 						<bytes key="NSTransformStruct">P4AAAL+AAABAoAAAw7mAAA</bytes>
 					</object>
-					<string>{{669, 523}, {320, 460}}</string>
+					<string>{{617, 696}, {320, 460}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<object class="NSAffineTransform">

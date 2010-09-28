@@ -34,17 +34,19 @@
 											 action:@selector(showMap)];
 	[[self navigationItem] setRightBarButtonItem:mapButton];
 	[mapButton release];
-	//[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:) name:@"UIDeviceOrientationDidChangeNotification" object:nil];
-	
-	
 	UINavigationBar *bar = [self.navigationController navigationBar];
 	bar.barStyle = UIBarStyleBlackOpaque;
 }	
-- (void)viewDidLoad 
-{
+- (void) viewWillAppear:(BOOL)animated
+{	
+    [super viewWillAppear:animated];
 	[self setupPage];
-    [super viewDidLoad];
 }
+//- (void)viewDidLoad
+//{	
+//    [super viewDidLoad];
+//	[self setupPage];
+//}
 - (void)didReceiveMemoryWarning 
 {
     [super didReceiveMemoryWarning];
@@ -56,8 +58,6 @@
 	[pageControl release];
 	[contentView release];
 }
-
-
 - (void)dealloc 
 {	
     [super dealloc];
@@ -65,35 +65,6 @@
 
 #pragma mark -
 #pragma mark The Guts
--(void)didRotate:(NSNotification *)notification
-{
-	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    currentOrientation =  [[UIDevice currentDevice] orientation];
-    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
-	
-	int w = 320; int h = 204;
-	int i = 0;
-
-	if(currentOrientation == 3 || currentOrientation == 4) {
-		w = 480; h = 135;
-		[scrollView setFrame: CGRectMake(0.0f,0.0f,480.0f,135.0f)];
-		[pageControl setFrame:CGRectMake(0.0f, 124.0f,480.0f, 36.0f)];
-		[contentView setFrame:CGRectMake(0.0f, 160.0f,480.0f, 160.0f)];	
-	}
-	else if(currentOrientation == 0 || currentOrientation == 1 || currentOrientation == 2) {
-		w = 320; h = 204;
-		[scrollView setFrame: CGRectMake(0.0f,0.0f,320.0f,204.0f)];
-		[pageControl setFrame:CGRectMake(0.0f, 204.0f,320.0f, 36.0f)];
-		[contentView setFrame:CGRectMake(0.0f, 240.0f,320.0f, 240.0f)];
-	}
-	CGFloat cx = 0;
-	for (UIImageView *imageView in scrollView.subviews) {
-		imageView.frame = CGRectMake( w * i++, 0, w, h);
-		cx += scrollView.frame.size.width;
-		
-	}
-	[scrollView setContentSize:CGSizeMake(cx,204)];
-}
 - (void)setupPage
 {
 	[[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -114,56 +85,26 @@
 	scrollView.scrollEnabled = YES;
 	scrollView.pagingEnabled = YES;
 	
-	int w = 320; int h = 204;
-	CGRect f = CGRectMake(0.0f,0.0f,320.0f,204.0f);
-	if(currentOrientation == 3 || currentOrientation == 4) {
-		w = 480; h = 135;
-		f = CGRectMake(0.0f,0.0f,480.0f,135.0f);
-		[scrollView setFrame:f];
-		[pageControl setFrame:CGRectMake(0.0f, 124.0f,480.0f, 36.0f)];
-		[contentView setFrame:CGRectMake(0.0f, 160.0f,480.0f, 160.0f)];
-	}
-	NSLog(@"WTF dimensions %d %d",w,h);
+	int w = 320; 
+	int h = 204;	
 	CGFloat cx = 0;
 	int i = 0;
-	for (NSDictionary *img in images) {
-		
+	for (NSDictionary *img in images) {		
 		NSString *file =  [img objectForKey:@"name"];	
-		//NSMutableString *path = [NSMutableString string];
-		//[path appendString:@"bundle://"];
-		//[path appendString:i];
-		//NSLog(path);
-		UIImage *image = [UIImage imageNamed:file];
-		
+		UIImage *image = [UIImage imageNamed:file];		
 		UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
 		imageView.contentMode = UIViewContentModeScaleAspectFit;
 		imageView.clipsToBounds = YES;
-		imageView.frame = CGRectMake( w * i++, 0, w, h);
-		//CGRect rect = imageView.frame;
-//		CGFloat w = image.size.width;
-//		CGFloat h = image.size.height;
-//	
-//		rect.size.height = h;
-//		rect.size.width = w; 
-//		rect.origin.x = ((f.size.width - image.size.width) / 2) + cx;
-//		rect.origin.y = ((f.size.height - image.size.height) / 2);
-//
-//		imageView.frame = rect;
-//		//NSLog("image size, w:%f h:%f",w,h);	
+		imageView.frame = CGRectMake( w * i++, 0, w, h);		
 		[scrollView addSubview:imageView];
 		[imageView release];
-
-		cx += f.size.width;
+		cx += w;
 	}
-	[scrollView setContentSize:CGSizeMake(cx, 204)];
-	
+	[scrollView setContentSize:CGSizeMake(cx, h)];
+	[scrollView setFrame:CGRectMake(0, 0, w, h)];
+	//[contentView setContentSize:CGSizeMake(w, h)];
 	self.pageControl.numberOfPages = [images count];
-	//filePath = [[NSBundle mainBundle] pathForResource:@"office" ofType:@"html"];
-	//fileContent = [[NSString alloc] initWithContentsOfFile:filePath];
 	[contentView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"office" ofType:@"html"]isDirectory:NO]]];
-
-	//contentView.font = [UIFont fontWithName:@"Helvetica Neue" size:14.0f];
-	//[contentView setContentToHTMLString:fileContent];
 }
 -(void) showMap
 {
@@ -177,13 +118,10 @@
 #pragma mark UIScrollViewDelegate stuff
 - (void)scrollViewDidScroll:(UIScrollView *)_scrollView
 {
-    if (pageControlIsChangingPage) {
+    if (pageControlIsChangingPage)
+	{
         return;
     }
-
-	/*
-	 *	We switch page at 50% across
-	 */
     CGFloat pageWidth = _scrollView.frame.size.width;
     int page = floor((_scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     pageControl.currentPage = page;

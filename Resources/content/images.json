@@ -3,68 +3,95 @@
 {"wratio":"750","hratio":"500","name":"stealth_1.jpg","info":"Stealth poster/ wallcovering","color":""},
 {"wratio":"750","hratio":"500","name":"stealth_2.jpg","info":"Stealth poster/ wallcovering","color":""},
 {"wratio":"750","hratio":"500","name":"stealth_3.jpg","info":"Stealth poster/ wallcovering","color":""},
-{"wratio":"750","hratio":"567","name":"stealth_4.jpg","info":"Stealth poster/ wallcovering","color":""},
+{"wratio":"750","hratio":"500","name":"stealth_4.jpg","info":"Stealth poster/ wallcovering","color":""},
+
 {"wratio":"750","hratio":"543","name":"OSL.jpg","info":"Orchestra of St. Luke's interactive installation","color":""},
+
 {"wratio":"720","hratio":"475","name":"stregis_1.jpg","info":"User interface designed for the St. Regis Hotel wine bar","color":""},
 {"wratio":"750","hratio":"500","name":"stregis_2.jpg","info":"User interface designed for the St. Regis Hotel wine bar","color":""},
 {"wratio":"750","hratio":"483","name":"stregis_3.jpg","info":"User interface designed for the St. Regis Hotel wine bar","color":""},
-{"wratio":"492","hratio":"640","name":"pioneers_1.jpg","info":"Brand Pioneer website created for JWT","color":""},
-{"wratio":"492","hratio":"640","name":"pioneers_2.jpg","info":"Brand Pioneer website created for JWT","color":""},
-{"wratio":"750","hratio":"557","name":"nokia.jpg","info":"Nokia web application for music band Noisettes","color":""},
-{"wratio":"853","hratio":"640","name":"mig_1.jpg","info":"MiG custom built content management system ","color":""},
+
+{"wratio":"480","hratio":"320","name":"pioneers_1.jpg","info":"Brand Pioneer website created for JWT","color":""},
+{"wratio":"480","hratio":"320","name":"pioneers_2.jpg","info":"Brand Pioneer website created for JWT","color":""},
+
+{"wratio":"750","hratio":"500","name":"nokia.jpg","info":"Nokia web application for music band Noisettes","color":""},
+
+{"wratio":"750","hratio":"500","name":"mig_1.jpg","info":"MiG custom built content management system ","color":""},
 {"wratio":"750","hratio":"500","name":"mig_2.jpg","info":"MiG custom built content management system ","color":""},
+
 {"wratio":"750","hratio":"500","name":"tictoc_1.jpg","info":"TicToc book published by JWT","color":""},
-{"wratio":"750","hratio":"475","name":"tictoc_2.jpg","info":"TicToc book published by JWT","color":""},
-{"wratio":"750","hratio":"567","name":"tictoc_3.jpg","info":"TicToc book published by JWT","color":""},
+{"wratio":"750","hratio":"500","name":"tictoc_2.jpg","info":"TicToc book published by JWT","color":""},
+{"wratio":"750","hratio":"500","name":"tictoc_3.jpg","info":"TicToc book published by JWT","color":""},
 {"wratio":"750","hratio":"500","name":"tictoc_4.jpg","info":"TicToc book published by JWT","color":""},
-{"wratio":"960","hratio":"594","name":"uclasite_1.jpg","info":"UCLA Architecture and Urban Design website","color":""},
-{"wratio":"720","hratio":"463","name":"uclasite_2.jpg","info":"UCLA Architecture and Urban Design website","color":""},
-{"wratio":"960","hratio":"418","name":"matin_1.jpg","info":"Matin Gallery brand and website","color":""},
-{"wratio":"750","hratio":"598","name":"matin_2.jpg","info":"Matin Gallery brand and website","color":""},
-{"wratio":"750","hratio":"585","name":"matin_3.jpg","info":"Matin Gallery brand and website","color":""},
+
+{"wratio":"750","hratio":"500","name":"uclasite_1.jpg","info":"UCLA Architecture and Urban Design website","color":""},
+{"wratio":"750","hratio":"500","name":"uclasite_2.jpg","info":"UCLA Architecture and Urban Design website","color":""},
+
+{"wratio":"960","hratio":"640","name":"matin_1.jpg","inf	o":"Matin Gallery brand and website","color":""},
+{"wratio":"750","hratio":"582","name":"matin_2.jpg","info":"Matin Gallery brand and website","color":""},
+{"wratio":"750","hratio":"569","name":"matin_3.jpg","info":"Matin Gallery brand and website","color":""},
+
 {"wratio":"960","hratio":"640","name":"thebaffler_1.jpg","info":"Brand identity and publication design for The Baffler","color":""},
 {"wratio":"750","hratio":"500","name":"thebaffler_2.jpg","info":"Brand identity and publication design for The Baffler","color":""},
 {"wratio":"750","hratio":"500","name":"thebaffler_3.jpg","info":"Brand identity and publication design for The Baffler","color":""},
 {"wratio":"750","hratio":"500","name":"thebaffler_4.jpg","info":"Brand identity and publication design for The Baffler","color":""},
 {"wratio":"750","hratio":"500","name":"thebaffler_5.jpg","info":"Brand identity and publication design for The Baffler","color":""},
+
 {"wratio":"750","hratio":"500","name":"view_1.jpg","info":"JWT View, proprietary data visualization application ","color":""},
 {"wratio":"750","hratio":"500","name":"view_2.jpg","info":"JWT View, proprietary data visualization application ","color":""},
+
 {"wratio":"750","hratio":"563","name":"glennligon_1.jpg","info":"Figure, Glenn Ligon catalogue published by Yvonne Lambert Gallery","color":""},
 {"wratio":"750","hratio":"563","name":"glennligon_2.jpg","info":"Figure, Glenn Ligon catalogue published by Yvonne Lambert Gallery","color":""},
 {"wratio":"750","hratio":"563","name":"glennligon_3.jpg","info":"Figure, Glenn Ligon catalogue published by Yvonne Lambert Gallery","color":""},
+
 {"wratio":"750","hratio":"613","name":"hao.jpg","info":"Holm Architecture Office (HAO) website","color":""},
-{"wratio":"907","hratio":"640","name":"sorg_mark.jpg","info":"Brand identity for Sorg Architects","color":""},
-{"wratio":"750","hratio":"578","name":"north.jpg","info":"Brand identity for North8 luxury residence, Brooklyn, NY","color":""},
+
+{"wratio":"960","hratio":"640","name":"sorg_mark.jpg","info":"Brand identity for Sorg Architects","color":""},
+
+{"wratio":"960","hratio":"640","name":"north.jpg","info":"Brand identity for North8 luxury residence, Brooklyn, NY","color":""},
+
 {"wratio":"960","hratio":"640","name":"DB_mark.jpg","info":"Brand identity for Della Valle Bernheimer Architects","color":""},
+
 {"wratio":"960","hratio":"640","name":"genesis_mark.jpg","info":"Brand identity for Genesis Companies","color":""},
+
 {"wratio":"960","hratio":"640","name":"jet_1.jpg","info":"Brand identity for JET: Jewelry Ethics Trust","color":""},
 {"wratio":"750","hratio":"450","name":"jet_2.jpg","info":"Brand identity for JET: Jewelry Ethics Trust","color":""},
 {"wratio":"750","hratio":"450","name":"jet_3.jpg","info":"Brand identity for JET: Jewelry Ethics Trust","color":""},
+
 {"wratio":"750","hratio":"500","name":"bfcm_logomark.jpg","info":"Brand identity for Byzantine Fresco Chapel Museum, Houston, TX","color":""},
+
 {"wratio":"960","hratio":"640","name":"sophie_mark.jpg","info":"Brand identity for Sophie, NYC","color":""},
-{"wratio":"800","hratio":"639","name":"88_morning_1.jpg","info":"Brand identity and sales office installation for 88 Morningside, New York","color":""},
-{"wratio":"800","hratio":"533","name":"88_morning_2.jpg","info":"Brand identity and sales office installation for 88 Morningside, New York","color":""},
-{"wratio":"960","hratio":"680","name":"88_morningside_3.jpg","info":"Brand identity and sales office installation for  88 Morningside","color":""},
+
+{"wratio":"800","hratio":"600","name":"88_morning_1.jpg","info":"Brand identity and sales office installation for 88 Morningside, New York","color":""},
+{"wratio":"800","hratio":"600","name":"88_morning_2.jpg","info":"Brand identity and sales office installation for 88 Morningside, New York","color":""},
+{"wratio":"800","hratio":"567","name":"88_morningside_3.jpg","info":"Brand identity and sales office installation for  88 Morningside","color":""},
+
 {"wratio":"900","hratio":"400","name":"FM003.jpg","info":"Custom wallcoverings for Museum Tower residences, NYC","color":""},
 {"wratio":"640","hratio":"960","name":"FM007_1.jpg","info":"Custom wallcoverings for Museum Tower residences, NYC","color":""},
 {"wratio":"960","hratio":"640","name":"FM007_2.jpg","info":"Custom wallcoverings for Museum Tower residences, NYC","color":""},
 {"wratio":"960","hratio":"640","name":"FM007_3.jpg","info":"Custom wallcoverings for Museum Tower residences, NYC","color":""},
+
 {"wratio":"750","hratio":"500","name":"narcotics_1.jpg","info":"Narcotic Farm book published by Abrams","color":""},
 {"wratio":"750","hratio":"500","name":"narcotics_2.jpg","info":"Narcotic Farm book published by Abrams","color":""},
 {"wratio":"750","hratio":"500","name":"narcotics_3.jpg","info":"Narcotic Farm book published by Abrams","color":""},
 {"wratio":"750","hratio":"500","name":"narcotics_4.jpg","info":"Narcotic Farm book published by Abrams","color":""},
+
 {"wratio":"750","hratio":"500","name":"matin_4.jpg","info":"Invitation for Christopher Kurtz at Matin Gallery","color":""},
 {"wratio":"750","hratio":"500","name":"matin_5.jpg","info":"Invitation for Christopher Kurtz at Matin Gallery","color":""},
-{"wratio":"456","hratio":"640","name":"studio_1.jpg","info":"Studio Museum in Harlem magazine","color":""},
+
+{"wratio":"444","hratio":"637","name":"studio_1.jpg","info":"Studio Museum in Harlem magazine","color":""},
 {"wratio":"750","hratio":"500","name":"studio_2.jpg","info":"Studio Museum in Harlem magazine","color":""},
 {"wratio":"750","hratio":"500","name":"studio_3.jpg","info":"Studio Museum in Harlem magazine","color":""},
 {"wratio":"750","hratio":"500","name":"studio_4.jpg","info":"Studio Museum in Harlem magazine","color":""},
-{"wratio":"960","hratio":"593","name":"ucla_new_4.jpg","info":"UCLA Architecture and Urban Design brand identity","color":""},
+
+{"wratio":"750","hratio":"500","name":"ucla_new_4.jpg","info":"UCLA Architecture and Urban Design brand identity","color":""},
 {"wratio":"960","hratio":"594","name":"ucla_new_1.jpg","info":"UCLA Architecture and Urban Design brand identity","color":""},
 {"wratio":"960","hratio":"600","name":"ucla_new_2.jpg","info":"UCLA Architecture and Urban Design brand identity","color":""},
 {"wratio":"960","hratio":"593","name":"ucla_new_3.jpg","info":"UCLA Architecture and Urban Design brand identity","color":""},
-{"wratio":"750","hratio":"503","name":"uclacatalog_1.jpg","info":"Catalogue for UCLA Architecture and  Urban Design","color":""},
-{"wratio":"750","hratio":"502","name":"uclacatalog_2.jpg","info":"Catalogue for UCLA Architecture and  Urban Design","color":""},
+
+{"wratio":"750","hratio":"503","name":"uclacatalog_1.jpg","info":"Catalogue for UCLA Architecture and Urban Design","color":""},
+{"wratio":"750","hratio":"502","name":"uclacatalog_2.jpg","info":"Catalogue for UCLA Architecture and Urban Design","color":""},
+
 {"wratio":"960","hratio":"640","name":"calendar_1.jpg","info":"Art of Andy Warhol 2011 calendar and poster","color":""},
 {"wratio":"960","hratio":"640","name":"calendar_2.jpg","info":"Art of Andy Warhol 2011 calendar and poster","color":""}	
 ]	
